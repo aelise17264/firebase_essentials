@@ -1,3 +1,3 @@
-import { SingleDatePicker as DatePicker } from 'react-dates';
+import { SingleDatePicker as DatePicker } from "react-dates";
 
 export { DatePicker };

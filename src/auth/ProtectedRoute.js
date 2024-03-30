@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
 
 export const ProtectedRoute = ({ isAuthed, isLoading, ...props }) => {
   if (isLoading) {
@@ -7,10 +7,8 @@ export const ProtectedRoute = ({ isAuthed, isLoading, ...props }) => {
   }
 
   if (!isAuthed) {
-    return <Redirect to='/sign-in' />
+    return <Redirect to="/sign-in" />;
   }
 
-  return (
-    <Route {...props} />
-  );
-}
+  return <Route {...props} />;
+};

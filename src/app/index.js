@@ -1,4 +1,4 @@
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from "./serviceWorker";
 
-export { App } from './App';
+export { App } from "./App";
 export { serviceWorker };

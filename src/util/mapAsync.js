@@ -3,4 +3,4 @@
 // we want to upload several files asynchronously and then
 // get the URLs
 export const mapAsync = async (arr, func) =>
-    Promise.all(arr.map(item => func(item)));
+  Promise.all(arr.map((item) => func(item)));

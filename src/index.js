@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { App, serviceWorker } from './app';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { App, serviceWorker } from "./app";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
+import "react-dates/initialize";
+import "react-dates/lib/css/_datepicker.css";
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -15,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "restaurant-reservations-m3024.appspot.com",
   messagingSenderId: "301268353621",
   appId: "1:301268353621:web:cfffef4d1c218522c5cadc",
-  measurementId: "G-G3MTNVNZHG"
+  measurementId: "G-G3MTNVNZHG",
 };
 
 // Initialize Firebase
@@ -28,7 +27,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
 
 // If you want your app to work offline and load faster, you can change

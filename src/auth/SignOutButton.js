@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Button } from '../ui';
+import React from "react";
+import styled from "styled-components";
+import { Button } from "../ui";
 
 export const StyledButton = styled(Button)`
-    background-color: #ed0d25;
+  background-color: #ed0d25;
 `;
 
 /*
@@ -11,14 +11,13 @@ export const StyledButton = styled(Button)`
     been signed in with Firebase Auth
 */
 export const SignOutButton = () => {
-    const onClickSignOut = async () => {
-        // Firebase code goes here
-    }
+  const onClickSignOut = async () => {
+    // Firebase code goes here
+  };
 
-    return (
-        <StyledButton
-            onClick={onClickSignOut}
-            style={{ float: 'right' }}
-        >Sign Out</StyledButton>
-    );
-}
+  return (
+    <StyledButton onClick={onClickSignOut} style={{ float: "right" }}>
+      Sign Out
+    </StyledButton>
+  );
+};
