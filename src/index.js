@@ -4,11 +4,12 @@ import './index.css';
 import { App, serviceWorker } from './app';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDJcHtipstdTyI6Y-kHi0JjepTcQAvedhY",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "restaurant-reservations-m3024.firebaseapp.com",
   projectId: "restaurant-reservations-m3024",
   storageBucket: "restaurant-reservations-m3024.appspot.com",
