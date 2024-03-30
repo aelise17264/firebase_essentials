@@ -2,9 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { App, serviceWorker } from './app';
-
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDJcHtipstdTyI6Y-kHi0JjepTcQAvedhY",
+  authDomain: "restaurant-reservations-m3024.firebaseapp.com",
+  projectId: "restaurant-reservations-m3024",
+  storageBucket: "restaurant-reservations-m3024.appspot.com",
+  messagingSenderId: "301268353621",
+  appId: "1:301268353621:web:cfffef4d1c218522c5cadc",
+  measurementId: "G-G3MTNVNZHG"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // This is where the magic happens. React renders our App component
 // inside the div with the id "root"
