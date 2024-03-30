@@ -4,15 +4,14 @@ import {
   CreateAccountPage,
   EmailConfirmationLanderPage,
   SignInPage,
-  ProtectedRoute,
   useAuth,
 } from "../auth";
+import { ProtectedRoute } from "../auth/ProtectedRoute";
 import { ReservationsListPage } from "../reservations";
 import { RestaurantDetailPage, SearchPage } from "../restaurants";
 import { WriteAReviewPage, WriteAReviewThankYouPage } from "../reviews";
 import { EditProfilePage } from "../user";
 import "./App.css";
-
 
 /*
   This is the main React component that we render the rest of
@@ -31,7 +30,11 @@ export function App() {
         <Route path="/create-account">
           <CreateAccountPage />
         </Route>
-        <ProtectedRoute isAuthed={!!user} isLoading={isLoading} path="/edit-profile">
+        <ProtectedRoute
+          isAuthed={!!user}
+          isLoading={isLoading}
+          path="/edit-profile"
+        >
           <EditProfilePage />
         </ProtectedRoute>
         <Route path="/email-confirmation/success">
@@ -46,13 +49,25 @@ export function App() {
         <ProtectedRoute isAuthed={!!user} isLoading={isLoading} path="/search">
           <SearchPage />
         </ProtectedRoute>
-        <ProtectedRoute isAuthed={!!user} isLoading={isLoading} path="/restaurants/:id">
+        <ProtectedRoute
+          isAuthed={!!user}
+          isLoading={isLoading}
+          path="/restaurants/:id"
+        >
           <RestaurantDetailPage />
         </ProtectedRoute>
-        <ProtectedRoute isAuthed={!!user} isLoading={isLoading} path="/write-a-review/:id">
+        <ProtectedRoute
+          isAuthed={!!user}
+          isLoading={isLoading}
+          path="/write-a-review/:id"
+        >
           <WriteAReviewPage />
         </ProtectedRoute>
-        <ProtectedRoute isAuthed={!!user} isLoading={isLoading} path="/review/thank-you">
+        <ProtectedRoute
+          isAuthed={!!user}
+          isLoading={isLoading}
+          path="/review/thank-you"
+        >
           <WriteAReviewThankYouPage />
         </ProtectedRoute>
       </Switch>

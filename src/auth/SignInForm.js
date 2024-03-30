@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { Button, ErrorMessage, Heading, Modal, TextInput } from "../ui";
 import { ResetPasswordForm } from "./ResetPasswordForm";
+import { signIn } from "./Signin";
 
 const Form = styled.div`
   width: 350px;
@@ -41,6 +42,12 @@ export const SignInForm = () => {
 
   const onSignInClicked = async () => {
     // Firebase code goes here
+    try {
+      await signIn(emailValue, passwordValue);
+      history.push("/");
+    } catch (e) {
+      setErrorMessage(e.message);
+    }
   };
 
   const onSignInWithGoogleClicked = async () => {

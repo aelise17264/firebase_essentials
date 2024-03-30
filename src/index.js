@@ -7,8 +7,11 @@ import { getAnalytics } from "firebase/analytics";
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 
+// const fbApiKey = ;
+// console.log(fbApiKey);
+
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: `${process.env.FIREBASE_ESSENTIALS_API_KEY}`,
   authDomain: "restaurant-reservations-m3024.firebaseapp.com",
   projectId: "restaurant-reservations-m3024",
   storageBucket: "restaurant-reservations-m3024.appspot.com",
