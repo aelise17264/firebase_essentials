@@ -1,9 +1,9 @@
-import {getCurrentUser} from '../auth';
-import { getUserInfo } from './getUserInfo';
+import { getCurrentUser } from "../auth";
+import { getUserInfo } from "./GetUserInfo";
 
 export const getCurrentUserInfo = async () => {
-    const currentUser = getCurrentUser();
-    if(!currentUser) return null;
+  const currentUser = getCurrentUser();
+  if (!currentUser) return null;
 
-    return await getUserInfo(currentUser.id);
-}
+  return await getUserInfo(currentUser.id);
+};

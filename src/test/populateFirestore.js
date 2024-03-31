@@ -1,8 +1,12 @@
-const firebase = require('firebase');
-require('firebase/firestore');
+const firebase = require("firebase");
+require("firebase/firestore");
 
-const { reservations, restaurants, dateAvailabilities, reviews } = require('./testData');
-
+const {
+  reservations,
+  restaurants,
+  dateAvailabilities,
+  reviews,
+} = require("./testData");
 
 const firebaseConfig = {
   apiKey: `${process.env.FIREBASE_ESSENTIALS_API_KEY}`,
