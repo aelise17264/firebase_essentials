@@ -5,5 +5,7 @@ export const getCurrentUser = () => {
   const auth = getAuth();
   const user = auth.currentUser;
   if (!user) return null;
-  return {};
+  return {
+    id: user.uid,
+  };
 };
