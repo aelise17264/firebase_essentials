@@ -27,11 +27,7 @@ const analytics = getAnalytics(app);
 
 // This is where the magic happens. React renders our App component
 // inside the div with the id "root"
-ReactDOM.render(
-    <App />
-  ,
-  document.getElementById("root"),
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

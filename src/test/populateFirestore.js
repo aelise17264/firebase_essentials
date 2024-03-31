@@ -1,18 +1,8 @@
-// import { initializeApp, firestore } from "firebase";
-// import "firebase/firestore";
-// import {getFirestore} from "firebase-admin/lib/firestore";
+const firebase = require('firebase');
+require('firebase/firestore');
 
-// import { initializeApp } from "firebase/app";
-// import { getFirestore } from "firebase/firestore";
-import { initializeApp, firestore } from "firebase";
-import "firebase/firestore";
+const { reservations, restaurants, dateAvailabilities, reviews } = require('./testData');
 
-import {
-  reservations,
-  restaurants,
-  reviews,
-  dateAvailabilities,
-} from "./testData";
 
 const firebaseConfig = {
   apiKey: `${process.env.FIREBASE_ESSENTIALS_API_KEY}`,
@@ -24,9 +14,9 @@ const firebaseConfig = {
   measurementId: "G-G3MTNVNZHG",
 };
 
-initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-const db = firestore();
+const db = firebase.firestore();
 
 function populateCollection(collectionName, items) {
   return Promise.all(
