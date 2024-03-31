@@ -8,7 +8,7 @@ import firebase from "firebase/app";
 
 export const signIn = async (email, password) => {
   try {
-    const result = await signInWithEmailAndPassword;
+    const result = await signInWithEmailAndPassword();
     return {};
   } catch (e) {
     throw new Error("Error signing in");

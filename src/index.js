@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { App, serviceWorker } from "./app";
+import { App, serviceWorker } from "./app/index.js";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 
@@ -27,9 +28,8 @@ const analytics = getAnalytics(app);
 // This is where the magic happens. React renders our App component
 // inside the div with the id "root"
 ReactDOM.render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  ,
   document.getElementById("root"),
 );
 

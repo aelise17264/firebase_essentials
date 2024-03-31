@@ -13,7 +13,7 @@ const reservations = [
   {
     id: "12345",
     restaurantId: "123",
-    userId: "<your-user-id>", // replace these userIds with your own
+    userId: "iElDxjmEn4fpts0myUI8manXuR42", // replace these userIds with your own
     date: dateFormat(twoWeeksFromNow),
     time: "7:00PM",
     numberOfPeople: 2,
@@ -22,7 +22,7 @@ const reservations = [
   {
     id: "12346",
     restaurantId: "345",
-    userId: "<your-user-id>",
+    userId: "iElDxjmEn4fpts0myUI8manXuR42",
     date: dateFormat(twoWeeksOneDayFromNow),
     time: "6:30PM",
     numberOfPeople: 2,
@@ -31,7 +31,7 @@ const reservations = [
   {
     id: "12347",
     restaurantId: "678",
-    userId: "<your-user-id>",
+    userId: "iElDxjmEn4fpts0myUI8manXuR42",
     date: dateFormat(twoWeeksTwoDaysFromNow),
     time: "8:00PM",
     numberOfPeople: 4,
@@ -44,12 +44,12 @@ const reviews = [
     id: "111111",
     reservationId: "12345",
     restaurantId: "123",
-    userId: "<your-user-id>",
+    userId: "iElDxjmEn4fpts0myUI8manXuR42",
     rating: 4.0,
-    // replace the "<your-project-id>" with the app id you choose during setup. These links won't
+    // replace the "restaurant-reservations-m3024" with the app id you choose during setup. These links won't
     // point to anything until we upload these files to Cloud Storage.
     photoUrls: [
-      "https://storage.googleapis.com/<your-project-id>.appspot.com/reviewPhotos/hemingways-review-1.jpeg",
+      "https://storage.googleapis.com/restaurant-reservations-m3024.appspot.com/reviewPhotos/hemingways-review-1.jpeg",
     ],
     text: `
         I really like this place. Their take on pot roast is sublime, and
@@ -123,7 +123,7 @@ const restaurants = [
     id: "123",
     name: "Hemingway's",
     imageUrl:
-      "https://storage.googleapis.com/<your-project-id>.appspot.com/restaurants/hemingways.jpeg",
+      "https://storage.googleapis.com/restaurant-reservations-m3024.appspot.com/restaurants/hemingways.jpeg",
     rating: 4.0,
     address: {
       street: "123 Someone Street",
@@ -143,7 +143,7 @@ const restaurants = [
     id: "345",
     name: "Ben's Burgers",
     imageUrl:
-      "https://storage.googleapis.com/<your-project-id>.appspot.com/restaurants/bens-burgers.jpeg",
+      "https://storage.googleapis.com/restaurant-reservations-m3024.appspot.com/restaurants/bens-burgers.jpeg",
     rating: 3.5,
     address: {
       street: "5 Burger Lane",
@@ -161,7 +161,7 @@ const restaurants = [
     id: "678",
     name: "Le Mollusc",
     imageUrl:
-      "https://storage.googleapis.com/<your-project-id>.appspot.com/restaurants/le-mollusc.jpeg",
+      "https://storage.googleapis.com/restaurant-reservations-m3024.appspot.com/restaurants/le-mollusc.jpeg",
     rating: 4.5,
     address: {
       street: "7 Fancy Avenue",
