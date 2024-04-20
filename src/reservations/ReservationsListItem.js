@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import { Button, Link, Thumbnail } from "../ui";
+import { subscribeToCurrentUserReservations } from "./SubscribeToCurrentUserReservations";
 
 const ListItemContainer = styled.div`
   align-items: center;
@@ -35,6 +36,14 @@ const ButtonWrap = styled.div`
 */
 export const ReservationsListItem = ({ item: reservation, onSelect }) => {
   const { restaurant } = reservation;
+
+  useEffect(() => {
+    const unsubscribe = subscribeToCurrentUserReservations(res => {
+      subscribeToReservations(res);
+    })
+    return unsubscribe;
+  }, []);
+
   return (
     <ListItemContainer>
       <ThumbnailWrap>

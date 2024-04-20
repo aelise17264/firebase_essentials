@@ -12,8 +12,9 @@ import {
   Tag,
   Thumbnail,
 } from "../ui";
-import { ReviewListItem } from "../reviews";
+import { ReviewListItem, getReviews } from "../reviews";
 import { MakeAReservationForm } from "../reservations";
+import { getRestaurants } from "./GetRestaurants";
 
 const ThumbnailWrap = styled.div`
   display: flex;
@@ -56,10 +57,21 @@ export const RestaurantDetailPage = () => {
 
   useEffect(() => {
     // Firebase code for loading the restaurant goes here
+    const loadRestaurant = async () => {
+      const result = await getRestaurants(id);
+      setRestaurant(result);
+      setIsLoading(false);
+    }
+    loadRestaurant();
   }, [id]);
 
   useEffect(() => {
     // Firebase code for loading the restaurant's reviews goes here
+    const loadReviews = async () => {
+      const result = await getReviews(id)
+      setReviews(result)
+    }
+    loadReviews();
   }, [id]);
 
   // Display a loading message while the Firebase data is loading
