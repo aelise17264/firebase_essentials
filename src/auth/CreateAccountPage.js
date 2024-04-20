@@ -10,6 +10,7 @@ import {
   TextInput,
   TextArea,
 } from "../ui";
+import {signOut} from './SignOut';
 
 // These are styled components, which are used throughout
 // the application. Basically, they allow us to define CSS
@@ -75,6 +76,22 @@ export const CreateAccountPage = () => {
     }
 
     // Firebase-related code goes here
+    const newUserInfo = {
+      firstName, LastName, emailAddress, bio
+    };
+
+    await fetch('/createAccount', {
+      method: 'POST',
+      body: JSON.stringify({ newUserInfo}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+
+    alert('Account created! Please check your inbox for a confirmation email')
+
+    await signOut();
+    history.push('/sign-in')
   };
 
   return (
